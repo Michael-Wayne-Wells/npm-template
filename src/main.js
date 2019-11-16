@@ -1,6 +1,5 @@
 import { User } from './calc.js';
 import $ from 'jquery';
-import 'popper.js';
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';

@@ -19,15 +19,11 @@ describe('user', () => {
     let user = new User('mike', 32);
     expect(user.planetAge(user.age, user.aging.jupiter)).toEqual(2);
   })
-test('uesrs years left to live', () => {
-  let user = new User('mike', 32, 70);
-  expect(user.deathClock(70,32)).toEqual(38);
-})
-test('uesrs years left to live', () => {
-  let user = new User('mike', 32, 70);
-  expect(user.deathClock(70,72)).toEqual(2);
-})
-
-
-
+  test('uesrs years left to live', () => {
+    let user = new User('mike', 32, 70);
+    expect(user.deathClock(70,32)).toEqual(38);
+  })
+  test('uesrs years left to live', () => {
+    expect(user.deathClock(70,72)).toEqual(2);
+  })
 })
