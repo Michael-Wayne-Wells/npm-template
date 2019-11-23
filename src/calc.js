@@ -1,24 +1,19 @@
 export class User {
-  constructor(name, age, death) {
+  constructor(name, age, death, aging) {
     this.name = name;
     this.age = age;
     this.death = death;
-    this.aging = {
-      mercury: 4.16,
-      venus: 1.61,
-      mars: .532,
-      jupiter: .084
-    };
+    this.aging = aging;
   }
 
-  planetAge(age, aging) {
-    return Math.floor(age * aging);
+  planetAge() {
+    return Math.floor(this.age * this.aging);
   }
 
-  deathClock(death, age) {
-    let yearsLeft = Math.floor(death - age);
-    let pastExp = Math.floor(age - death);
-    if(yearsLeft < 0) {
+  deathClock() {
+    let yearsLeft = Math.floor(this.aging * (this.death - this.age));
+    let pastExp = Math.floor(this.aging * (this.age - this.death));
+    if (yearsLeft < 0) {
       return pastExp;
     } else {
       return yearsLeft;
