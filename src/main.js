@@ -6,7 +6,6 @@ import './styles.css';
 
 $(document).ready(function() {
 
-
   $("#user-info").submit(function(event) {
     event.preventDefault();
     const userName = $('#user-name').val();
